@@ -34,7 +34,7 @@ a:hover { text-decoration:none; }
 <body id="he_er" style="background:#ffe398;text-align: center;width: 100%;">
     <div style=" position:relative; width: 100%;text-align: center;height: 100%;">
         <a href="">
-            <img  style=" width: 60%;height: auto; position: absolute; left: 50%; top:50%;transform: translate(-50%,-50%) ; animation: motion 0.5s linear 0s infinite alternate; margin-top: 0;" src="/cho_img.png" alt="cho">
+            <img  style=" width: 60%;height: auto; position: absolute; left: 50%; top:50%;transform: translate(-50%,-50%) ; animation: motion 0.5s linear 0s infinite alternate; margin-top: 0;" src="cho_img.png" alt="cho">
         </a> 
             <p style=" padding: 10px 30px; background-color:rgba(255,255,255,0.2); border-radius: 3px; position: absolute; left: 50%; top:90%;transform: translateX(-50%);font-weight: bolder;cursor: pointer;"><a href="void(0);" onclick="alert('실패');return false;" style="text-decoration:none">거 절</a> </p>
         
