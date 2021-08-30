@@ -7,16 +7,36 @@
     <title>난지도에 가요!</title>
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 							
-<script src="scri.js"></script>
+<script>
+	$(document).ready(function () {					//문서 세팅 되면
+		 var map = document.getElementById("he_er")	//#map 찾아서 변수에 저장
+		 var winHeight = 0;							//윈도우 높이 저장할 변수 초기화
 
+		function setMapSize(){						//#map의 높이 설정할 함수 생성 
+			winHeight = window.innerHeight;			//윈도우 높이 구해서 변수에 저장
+		
+			map.style.height = winHeight+"px";		//#map 높이를 윈도우 높이로 설정
+		}
+		 setMapSize();								//함수 실행																//함수 실행
+		 $(window).resize(setMapSize);				//윈도우창 사이즈 변하면 함수 재실행
+	 });
+</script>
+<style>
+a.bou{ text-decoration:none;color:gray;opacity: 50%;}
+a.bou:hover { text-decoration:none; }
+@keyframes motion {
+	0% {margin-top: 0px;width: 60%;}
+	100% {margin-top: 10px; width: 65%;}
+}
+</style>
 </head>
 
-<body id="he_er" style="background:#ffe398;text-align: center;width: 100%;">
-    <div style=" position:relative; width: 100%;text-align: center;height: 100%;">
-        <a href="">
-            <img  style=" width: 60%;height: auto; position: absolute; left: 50%; top:50%;transform: translate(-50%,-50%) ; animation: motion 0.5s linear 0s infinite alternate; margin-top: 0;" src="cho_img.png" alt="cho">
-        </a> 
-            <p style=" padding: 10px 30px; background-color:rgba(255,255,255,0.2); border-radius: 3px; position: absolute; left: 50%; top:90%;transform: translateX(-50%);font-weight: bolder;cursor: pointer;"><a href="void(0);" onclick="alert('실패');return false;" style="text-decoration:none">거 절</a> </p>
+<body id="he_er" style="background:#ffe398;width: 100%;">
+    <div style=" position:relative; width: 100%;height: 100%;">
+        <a href="#" style="width: 100%;height: auto; position: absolute; left: 50%; top:50%;">
+            <img  style=" width: 60%;height: auto; position: absolute; animation: motion 0.5s linear 0s infinite alternate; margin-top: 0;transform: translate(-50%,-50%) ;" src="cho_img.png" alt="cho">
+        </a>
+            <p style=" padding: 10px 30px; background-color:rgba(255,255,255,0.2); border-radius: 3px; position: absolute; left: 50%; top:90%;transform: translateX(-50%);font-weight: bolder;cursor: pointer;"><a class="bou" href="void(0);" onclick="alert('실패');return false;" style="text-decoration:none">거 절</a> </p>
         
     </div>
     
